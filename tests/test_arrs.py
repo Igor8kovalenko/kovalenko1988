@@ -5,6 +5,7 @@ from utils import arrs
 class TestArrs(unittest.TestCase):
 
     def test_get(self):
+
         self.assertEqual(arrs.get([1, 2, 3],2 , "test"), 3)
         self.assertEqual(arrs.get([1], 0, "test"), 1)
         self.assertEqual(arrs.get([1, 2], -1, "test"), "test")
@@ -12,6 +13,9 @@ class TestArrs(unittest.TestCase):
         self.assertEqual(arrs.get([1, 2, 3, 4], -2, "test"), "test")
         self.assertEqual(arrs.get([-1, -2, -3], -2, "test"), "test")
         self.assertEqual(arrs.get(["test", "qwe"], 1 ,"test"), "qwe")
+        self.assertEqual(arrs.get([1, 2, 3], 2, "test"), 3)
+        self.assertEqual(arrs.get(["test"], 0, "test"), "test")
+
     def test_slice(self):
 
         self.assertEqual(arrs.my_slice(([1, 2, 3, 4]), 5), [4])
